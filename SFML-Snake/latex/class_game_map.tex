@@ -1,0 +1,128 @@
+\hypertarget{class_game_map}{}\doxysection{Game\+Map Class Reference}
+\label{class_game_map}\index{GameMap@{GameMap}}
+
+
+\char`\"{}\+Snake Game\char`\"{} -\/ \mbox{\hyperlink{class_game_map}{Game\+Map}} Class.~\newline
+ 
+
+
+
+
+{\ttfamily \#include $<$game\+\_\+map.\+hpp$>$}
+
+Inheritance diagram for Game\+Map\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_map}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_map_a2b126e9ee4d5a7c7acdcc022adfca7e0}{Game\+Map}} (void)
+\item 
+virtual void \mbox{\hyperlink{class_game_map_aaab6691be05ce9403d2b798a572b445c}{draw}} (sf\+::\+Render\+Target \&, sf\+::\+Render\+States) const
+\item 
+bool \mbox{\hyperlink{class_game_map_a4998db64ed25e964c55851079fb52d49}{check\+\_\+intersection\+\_\+with\+\_\+circle}} (sf\+::\+Float\+Rect)
+\item 
+void \mbox{\hyperlink{class_game_map_a3b296c89e6b4bfb0b2e6a5912d072fcf}{add\+\_\+wall}} (sf\+::\+Float\+Rect)
+\item 
+void \mbox{\hyperlink{class_game_map_a364c56efdf9551e5c48b0245e1623b28}{reset}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_map_a85e1ce53d61a429a84c1defbc0bf18af}\label{class_game_map_a85e1ce53d61a429a84c1defbc0bf18af}} 
+std\+::vector$<$ sf\+::\+Float\+Rect $>$ {\bfseries walls}
+\begin{DoxyCompactList}\small\item\em array of walls rectangle coordiantes incapsulated into \href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Rect.php}{\texttt{ sf\+::\+Float\+Rect}} object.. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\char`\"{}\+Snake Game\char`\"{} -\/ \mbox{\hyperlink{class_game_map}{Game\+Map}} Class.~\newline
+
+
+The class implements functionality for the game levels structure.~\newline
+\begin{DoxyAuthor}{Author}
+Olha Sereda 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Olha Sereda (\href{mailto:olha.sereda@student.uj.edu.pl}{\texttt{ olha.\+sereda@student.\+uj.\+edu.\+pl}}) 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_map_a2b126e9ee4d5a7c7acdcc022adfca7e0}\label{class_game_map_a2b126e9ee4d5a7c7acdcc022adfca7e0}} 
+\index{GameMap@{GameMap}!GameMap@{GameMap}}
+\index{GameMap@{GameMap}!GameMap@{GameMap}}
+\doxysubsubsection{\texorpdfstring{GameMap()}{GameMap()}}
+{\footnotesize\ttfamily Game\+Map\+::\+Game\+Map (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Class constructor~\newline
+Creates blank level object.
+
+\begin{DoxyAuthor}{Author}
+Olha Sereda 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Olha Sereda (\href{mailto:olha.sereda@student.uj.edu.pl}{\texttt{ olha.\+sereda@student.\+uj.\+edu.\+pl}}) 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_map_a3b296c89e6b4bfb0b2e6a5912d072fcf}\label{class_game_map_a3b296c89e6b4bfb0b2e6a5912d072fcf}} 
+\index{GameMap@{GameMap}!add\_wall@{add\_wall}}
+\index{add\_wall@{add\_wall}!GameMap@{GameMap}}
+\doxysubsubsection{\texorpdfstring{add\_wall()}{add\_wall()}}
+{\footnotesize\ttfamily void Game\+Map\+::add\+\_\+wall (\begin{DoxyParamCaption}\item[{sf\+::\+Float\+Rect}]{rect }\end{DoxyParamCaption})}
+
+Adds new wall rectange to the array od walls in level. 
+\begin{DoxyParams}{Parameters}
+{\em rectangle} & coordinated incapsulated into \href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Rect.php}{\texttt{ sf\+::\+Float\+Rect}} object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_map_a4998db64ed25e964c55851079fb52d49}\label{class_game_map_a4998db64ed25e964c55851079fb52d49}} 
+\index{GameMap@{GameMap}!check\_intersection\_with\_circle@{check\_intersection\_with\_circle}}
+\index{check\_intersection\_with\_circle@{check\_intersection\_with\_circle}!GameMap@{GameMap}}
+\doxysubsubsection{\texorpdfstring{check\_intersection\_with\_circle()}{check\_intersection\_with\_circle()}}
+{\footnotesize\ttfamily bool Game\+Map\+::check\+\_\+intersection\+\_\+with\+\_\+circle (\begin{DoxyParamCaption}\item[{sf\+::\+Float\+Rect}]{rect }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rectangle} & coordinated incapsulated into \href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Rect.php}{\texttt{ sf\+::\+Float\+Rect}} object. @retrun true if the parameter\textquotesingle{}s rectangle intersects with any of level wall. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_map_aaab6691be05ce9403d2b798a572b445c}\label{class_game_map_aaab6691be05ce9403d2b798a572b445c}} 
+\index{GameMap@{GameMap}!draw@{draw}}
+\index{draw@{draw}!GameMap@{GameMap}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Game\+Map\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{rt,  }\item[{sf\+::\+Render\+States}]{st }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual redefined function to draw game level object on screen.~\newline
+It uses standart params to be used in sf\+::window.\+draw() method. 
+\begin{DoxyParams}{Parameters}
+{\em target} & Render target to draw to \href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1RenderTarget.php}{\texttt{ sf\+::\+Render\+Target}} \\
+\hline
+{\em states} & Current render states \href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1RenderStates.php}{\texttt{ sf\+::\+Render\+States}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Drawable.php}{\texttt{ sf\+::\+Drawable}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_game_map_a364c56efdf9551e5c48b0245e1623b28}\label{class_game_map_a364c56efdf9551e5c48b0245e1623b28}} 
+\index{GameMap@{GameMap}!reset@{reset}}
+\index{reset@{reset}!GameMap@{GameMap}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Game\+Map\+::reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Method clears array os level walls. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+\_\+map.\+hpp\item 
+game\+\_\+map.\+cpp\end{DoxyCompactItemize}

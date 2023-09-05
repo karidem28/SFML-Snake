@@ -1,0 +1,22 @@
+﻿  beer.cpp
+C:\Workspace\C++\SFML-Snake\SFML-Snake\beer.cpp(16,85): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Workspace\C++\SFML-Snake\SFML-Snake\beer.cpp(16,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Workspace\C++\SFML-Snake\SFML-Snake\beer.cpp(32,104): warning C4244: 'argument': conversion from 'const T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Workspace\C++\SFML-Snake\SFML-Snake\beer.cpp(32,74): warning C4244: 'argument': conversion from 'const T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+  SFML-Snake.vcxproj -> C:\Workspace\C++\SFML-Snake\x64\Debug\SFML-Snake.exe

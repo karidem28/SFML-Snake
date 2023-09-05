@@ -1,0 +1,35 @@
+\hypertarget{game_8hpp_source}{}\doxysection{game.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}snake.hpp"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_game}{Game}} : \textcolor{keyword}{public} sf::Drawable}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_game_a4cdb0dc943dfaa86e321640880d9a96a}{Game}}(sf::Vector2u, std::string, \mbox{\hyperlink{class_snake}{Snake}}*);}
+\DoxyCodeLine{38     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_a504a92dd9800dac3e1e04fc7a1b442e1}{draw}}(sf::RenderTarget\&, sf::RenderStates) \textcolor{keyword}{const};}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_ae7de68ad14079320e2d8898d98e5fff4}{set\_state}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{46     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_game_ac16e95617cb95e514fe869973414e1da}{get\_state}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_a1f49c1a913f518347f74b6cf80948f97}{add\_score}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_a4259eabad5d0884b7975c703a6e119e3}{reset\_score}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_abec1f521f9446afc7288d3b5b3cea6d4}{hero\_died}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{62     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_aff8bb3d072b401fddda21875d1d04f24}{reset\_game}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{66     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_a4003e892d0990f46284726fc280b8600}{continue\_game}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{67 \textcolor{keyword}{private}:}
+\DoxyCodeLine{68     sf::Vector2u \mbox{\hyperlink{class_game_a7ea8f805d435cde47137854d3ff1876f}{screensize}};  }
+\DoxyCodeLine{69     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_game_ae3e9779a8cb9076af19d0a932f36cff5}{state}};                 }
+\DoxyCodeLine{70     sf::Font \mbox{\hyperlink{class_game_af729561d89036f0c841bc1a428dc43cf}{font}};              }
+\DoxyCodeLine{71     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_game_a10e61d12159d538a3a5829b35bd3ba16}{fontsize}};               }
+\DoxyCodeLine{72     \mbox{\hyperlink{class_snake}{Snake}} *\mbox{\hyperlink{class_game_ac6002315e7c8ba1da4fe7a763fe442b2}{snake}};             }
+\DoxyCodeLine{73     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_game_afaf9404196df9968103d5b0d0ad08139}{score}};                 }
+\DoxyCodeLine{74     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_game_aaedfa82bf9e253bd98aa25783b252725}{life}};                   }
+\DoxyCodeLine{75 \};}
+\DoxyCodeLine{76 }
+
+\end{DoxyCode}

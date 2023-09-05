@@ -1,0 +1,190 @@
+\hypertarget{class_game}{}\doxysection{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+
+
+\char`\"{}\+Snake Game\char`\"{} -\/ \mbox{\hyperlink{class_game}{Game}} Class.~\newline
+ 
+
+
+
+
+{\ttfamily \#include $<$game.\+hpp$>$}
+
+Inheritance diagram for Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_a4cdb0dc943dfaa86e321640880d9a96a}{Game}} (sf\+::\+Vector2u, std\+::string, \mbox{\hyperlink{class_snake}{Snake}} $\ast$)
+\item 
+virtual void \mbox{\hyperlink{class_game_a504a92dd9800dac3e1e04fc7a1b442e1}{draw}} (sf\+::\+Render\+Target \&, sf\+::\+Render\+States) const
+\item 
+void \mbox{\hyperlink{class_game_ae7de68ad14079320e2d8898d98e5fff4}{set\+\_\+state}} (int)
+\item 
+int \mbox{\hyperlink{class_game_ac16e95617cb95e514fe869973414e1da}{get\+\_\+state}} (void)
+\item 
+void \mbox{\hyperlink{class_game_a1f49c1a913f518347f74b6cf80948f97}{add\+\_\+score}} (void)
+\item 
+void \mbox{\hyperlink{class_game_a4259eabad5d0884b7975c703a6e119e3}{reset\+\_\+score}} (void)
+\item 
+void \mbox{\hyperlink{class_game_abec1f521f9446afc7288d3b5b3cea6d4}{hero\+\_\+died}} (void)
+\item 
+void \mbox{\hyperlink{class_game_aff8bb3d072b401fddda21875d1d04f24}{reset\+\_\+game}} (void)
+\item 
+void \mbox{\hyperlink{class_game_a4003e892d0990f46284726fc280b8600}{continue\+\_\+game}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_a7ea8f805d435cde47137854d3ff1876f}\label{class_game_a7ea8f805d435cde47137854d3ff1876f}} 
+sf\+::\+Vector2u {\bfseries screensize}
+\begin{DoxyCompactList}\small\item\em game area(window) size \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_ae3e9779a8cb9076af19d0a932f36cff5}\label{class_game_ae3e9779a8cb9076af19d0a932f36cff5}} 
+int {\bfseries state}
+\begin{DoxyCompactList}\small\item\em state of game\+: 0 -\/ game; 1 -\/ loose life; 2 -\/ game over; \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_af729561d89036f0c841bc1a428dc43cf}\label{class_game_af729561d89036f0c841bc1a428dc43cf}} 
+sf\+::\+Font {\bfseries font}
+\begin{DoxyCompactList}\small\item\em loaded font object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_a10e61d12159d538a3a5829b35bd3ba16}\label{class_game_a10e61d12159d538a3a5829b35bd3ba16}} 
+int {\bfseries fontsize}
+\begin{DoxyCompactList}\small\item\em Size of the font in the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_ac6002315e7c8ba1da4fe7a763fe442b2}\label{class_game_ac6002315e7c8ba1da4fe7a763fe442b2}} 
+\mbox{\hyperlink{class_snake}{Snake}} $\ast$ {\bfseries snake}
+\begin{DoxyCompactList}\small\item\em pointer to the Hero object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_afaf9404196df9968103d5b0d0ad08139}\label{class_game_afaf9404196df9968103d5b0d0ad08139}} 
+int {\bfseries score}
+\begin{DoxyCompactList}\small\item\em score of the game -\/ count of eated apples \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_aaedfa82bf9e253bd98aa25783b252725}\label{class_game_aaedfa82bf9e253bd98aa25783b252725}} 
+int {\bfseries life}
+\begin{DoxyCompactList}\small\item\em current count of Hero\textquotesingle{}s lifes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\char`\"{}\+Snake Game\char`\"{} -\/ \mbox{\hyperlink{class_game}{Game}} Class.~\newline
+
+
+The class implements functionality for the game process, scores, and supervising.~\newline
+\begin{DoxyAuthor}{Author}
+Olha Sereda 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Olha Sereda (\href{mailto:olha.sereda@student.uj.edu.pl}{\texttt{ olha.\+sereda@student.\+uj.\+edu.\+pl}}) 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_a4cdb0dc943dfaa86e321640880d9a96a}\label{class_game_a4cdb0dc943dfaa86e321640880d9a96a}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2u}]{coord,  }\item[{std\+::string}]{fontname,  }\item[{\mbox{\hyperlink{class_snake}{Snake}} $\ast$}]{snake }\end{DoxyParamCaption})}
+
+Class \mbox{\hyperlink{class_game}{Game}} constructor~\newline
+sets default params\+:~\newline
+lives=5~\newline
+fontsize=20~\newline
+score=0~\newline
+
+\begin{DoxyParams}{Parameters}
+{\em sf\+::\+Vector2u} & -\/ screen size of game field -\/ in pixels \\
+\hline
+{\em path} & to the ttf font file. \\
+\hline
+{\em pointer} & to the \mbox{\hyperlink{class_snake}{Snake}} hero object; \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Vector2.php}{\texttt{ sf\+::\+Vector2u}}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Olha Sereda 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Olha Sereda (\href{mailto:olha.sereda@student.uj.edu.pl}{\texttt{ olha.\+sereda@student.\+uj.\+edu.\+pl}}) 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_a1f49c1a913f518347f74b6cf80948f97}\label{class_game_a1f49c1a913f518347f74b6cf80948f97}} 
+\index{Game@{Game}!add\_score@{add\_score}}
+\index{add\_score@{add\_score}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{add\_score()}{add\_score()}}
+{\footnotesize\ttfamily void Game\+::add\+\_\+score (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Method adds one to \mbox{\hyperlink{class_game_afaf9404196df9968103d5b0d0ad08139}{Game\+::score}} of game. \mbox{\Hypertarget{class_game_a4003e892d0990f46284726fc280b8600}\label{class_game_a4003e892d0990f46284726fc280b8600}} 
+\index{Game@{Game}!continue\_game@{continue\_game}}
+\index{continue\_game@{continue\_game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{continue\_game()}{continue\_game()}}
+{\footnotesize\ttfamily void Game\+::continue\+\_\+game (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Metod changes \mbox{\hyperlink{class_game_ae3e9779a8cb9076af19d0a932f36cff5}{Game\+::state}} to 0. \mbox{\Hypertarget{class_game_a504a92dd9800dac3e1e04fc7a1b442e1}\label{class_game_a504a92dd9800dac3e1e04fc7a1b442e1}} 
+\index{Game@{Game}!draw@{draw}}
+\index{draw@{draw}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Game\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual redefined function to draw full game area object on screen.~\newline
+It uses standart params to be used in sf\+::window.\+draw() method. 
+\begin{DoxyParams}{Parameters}
+{\em target} & Render target to draw to \href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1RenderTarget.php}{\texttt{ sf\+::\+Render\+Target}} \\
+\hline
+{\em states} & Current render states \href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1RenderStates.php}{\texttt{ sf\+::\+Render\+States}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Drawable.php}{\texttt{ sf\+::\+Drawable}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_game_ac16e95617cb95e514fe869973414e1da}\label{class_game_ac16e95617cb95e514fe869973414e1da}} 
+\index{Game@{Game}!get\_state@{get\_state}}
+\index{get\_state@{get\_state}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{get\_state()}{get\_state()}}
+{\footnotesize\ttfamily int Game\+::get\+\_\+state (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+current \mbox{\hyperlink{class_game_ae3e9779a8cb9076af19d0a932f36cff5}{Game\+::state}} of game\+: 0 -\/ game; 1 -\/ loose life; 2 -\/ game over; 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_abec1f521f9446afc7288d3b5b3cea6d4}\label{class_game_abec1f521f9446afc7288d3b5b3cea6d4}} 
+\index{Game@{Game}!hero\_died@{hero\_died}}
+\index{hero\_died@{hero\_died}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{hero\_died()}{hero\_died()}}
+{\footnotesize\ttfamily void Game\+::hero\+\_\+died (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Method decreace hero\textquotesingle{}s lifes and in case of 0 change \mbox{\hyperlink{class_game_ae3e9779a8cb9076af19d0a932f36cff5}{Game\+::state}} to 2 (game over). \mbox{\Hypertarget{class_game_aff8bb3d072b401fddda21875d1d04f24}\label{class_game_aff8bb3d072b401fddda21875d1d04f24}} 
+\index{Game@{Game}!reset\_game@{reset\_game}}
+\index{reset\_game@{reset\_game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{reset\_game()}{reset\_game()}}
+{\footnotesize\ttfamily void Game\+::reset\+\_\+game (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Method resets game attributes to default value. \mbox{\Hypertarget{class_game_a4259eabad5d0884b7975c703a6e119e3}\label{class_game_a4259eabad5d0884b7975c703a6e119e3}} 
+\index{Game@{Game}!reset\_score@{reset\_score}}
+\index{reset\_score@{reset\_score}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{reset\_score()}{reset\_score()}}
+{\footnotesize\ttfamily void Game\+::reset\+\_\+score (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Method set \mbox{\hyperlink{class_game_afaf9404196df9968103d5b0d0ad08139}{Game\+::score}} to 0. \mbox{\Hypertarget{class_game_ae7de68ad14079320e2d8898d98e5fff4}\label{class_game_ae7de68ad14079320e2d8898d98e5fff4}} 
+\index{Game@{Game}!set\_state@{set\_state}}
+\index{set\_state@{set\_state}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{set\_state()}{set\_state()}}
+{\footnotesize\ttfamily void Game\+::set\+\_\+state (\begin{DoxyParamCaption}\item[{int}]{state }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & \mbox{\hyperlink{class_game_ae3e9779a8cb9076af19d0a932f36cff5}{Game\+::state}} of game\+: 0 -\/ game; 1 -\/ loose life; 2 -\/ game over; \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game.\+hpp\item 
+game.\+cpp\end{DoxyCompactItemize}

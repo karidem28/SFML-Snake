@@ -1,0 +1,272 @@
+\hypertarget{class_snake}{}\doxysection{Snake Class Reference}
+\label{class_snake}\index{Snake@{Snake}}
+
+
+\char`\"{}\+Snake Game\char`\"{} -\/ \mbox{\hyperlink{class_snake}{Snake}} Class.  
+
+
+
+
+{\ttfamily \#include \char`\"{}snake.\+hpp\char`\"{}}
+
+Inheritance diagram for Snake\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_snake}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_snake_a532f3c20dfe0b7bee0e3d645abad3c7f}{Snake}} (sf\+::\+Vector2f, float, int)
+\item 
+virtual void \mbox{\hyperlink{class_snake_a2398caddba922a7e9b11242343c64a3b}{draw}} (sf\+::\+Render\+Target \&, sf\+::\+Render\+States) const
+\item 
+void \mbox{\hyperlink{class_snake_a338fac88ccf64d23fc9be7fea41fb57f}{update}} ()
+\item 
+void \mbox{\hyperlink{class_snake_af6c58c1bc5608aa891a42229600b5a39}{turn\+\_\+left}} ()
+\item 
+void \mbox{\hyperlink{class_snake_ac002012a9a255d19fd75ea9156313394}{turn\+\_\+right}} ()
+\item 
+void \mbox{\hyperlink{class_snake_a5dee5234e6eaf255cad39afca3d11834}{grow}} (unsigned int)
+\item 
+void \mbox{\hyperlink{class_snake_aa259354a4e2eb88f746549e50db13bf7}{reset\+\_\+delta}} ()
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_snake_a6e5816478df2547a6140c8ffd8c83944}{get\+\_\+coord}} (void)
+\item 
+sf\+::\+Float\+Rect \mbox{\hyperlink{class_snake_af79bbc8f1d5e87ac972c47b7bbc19ab0}{Get\+Rect}} (void)
+\item 
+bool \mbox{\hyperlink{class_snake_ae7fe32c1a1b701d133aeec52ad218869}{self\+\_\+intersection}} (void)
+\item 
+int \mbox{\hyperlink{class_snake_a37096b93062ca63114308569d692dab2}{get\+\_\+size}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_snake_a77e5c343d9a41bb700bfe20fd00f215d}{Calc\+Diff}} (float, float)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_snake_a354190b53e2c0d0c3820c9048e30b433}\label{class_snake_a354190b53e2c0d0c3820c9048e30b433}} 
+sf\+::\+Color {\bfseries color}
+\begin{DoxyCompactList}\small\item\em value current color of the snake object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_snake_a094669fbc835da222339285f376f0494}\label{class_snake_a094669fbc835da222339285f376f0494}} 
+float {\bfseries speed}
+\begin{DoxyCompactList}\small\item\em value of length of movoment on each game tick. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_snake_a60432d2ced74945555c26ae4279369b9}\label{class_snake_a60432d2ced74945555c26ae4279369b9}} 
+float {\bfseries delta}
+\begin{DoxyCompactList}\small\item\em value of current delta of turning. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_snake_a48d030c4a737277f96880ae3f598c371}\label{class_snake_a48d030c4a737277f96880ae3f598c371}} 
+float {\bfseries angle}
+\begin{DoxyCompactList}\small\item\em value of current ansolute angle of direction in degrees. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_snake_a3c9e9751f34ddc79cac932736c7ee718}\label{class_snake_a3c9e9751f34ddc79cac932736c7ee718}} 
+int {\bfseries size}
+\begin{DoxyCompactList}\small\item\em value of current tail size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_snake_a6996f0098a98d654ff93a502f02d6f81}\label{class_snake_a6996f0098a98d654ff93a502f02d6f81}} 
+std\+::vector$<$ sf\+::\+Vector2f $>$ {\bfseries path}
+\begin{DoxyCompactList}\small\item\em array of the all tail elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\char`\"{}\+Snake Game\char`\"{} -\/ \mbox{\hyperlink{class_snake}{Snake}} Class. 
+
+The Class implements functionality for the snake hero object in game.~\newline
+\begin{DoxyAuthor}{Author}
+Olha Sereda 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Olha Sereda (\href{mailto:olha.sereda@student.uj.edu.pl}{\texttt{ olha.\+sereda@student.\+uj.\+edu.\+pl}})
+\end{DoxyCopyright}
+Class describes of \mbox{\hyperlink{class_snake}{Snake}} functionality and properties, as\+:~\newline
+ Changing direction, size of tail, checking of intersecton with itself.~\newline
+ ~\newline
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{snake = \textcolor{keyword}{new} \mbox{\hyperlink{class_snake_a532f3c20dfe0b7bee0e3d645abad3c7f}{Snake}}(Vector2f(100,100),0,20);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (event.type == Event::KeyPressed)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (event.key.code == Keyboard::Left) \{}
+\DoxyCodeLine{        snake-\/>turn\_left();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (event.key.code == Keyboard::Right) \{}
+\DoxyCodeLine{        snake-\/>turn\_right();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordtype}{bool} IsIntersected = sn-\/>self\_intersection();}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (IsIntersected) DoSomethingToStopGame();}
+\DoxyCodeLine{snake-\/>grow(10);}
+\DoxyCodeLine{\textcolor{keyword}{delete}(sn);}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_snake_a532f3c20dfe0b7bee0e3d645abad3c7f}\label{class_snake_a532f3c20dfe0b7bee0e3d645abad3c7f}} 
+\index{Snake@{Snake}!Snake@{Snake}}
+\index{Snake@{Snake}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{Snake()}{Snake()}}
+{\footnotesize\ttfamily Snake\+::\+Snake (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{coords,  }\item[{float}]{angle,  }\item[{int}]{size = {\ttfamily 20} }\end{DoxyParamCaption})}
+
+Class constructor~\newline
+Initiate attributes\+:~\newline
+\mbox{\hyperlink{class_snake_a60432d2ced74945555c26ae4279369b9}{Snake\+::delta}}=1~\newline
+\mbox{\hyperlink{class_snake_a094669fbc835da222339285f376f0494}{Snake\+::speed}}=2~\newline
+\mbox{\hyperlink{class_snake_a354190b53e2c0d0c3820c9048e30b433}{Snake\+::color}} = sf\+::\+Color\+::\+Red; 
+\begin{DoxyParams}{Parameters}
+{\em coords} & abcolute coordinate of \mbox{\hyperlink{class_snake}{Snake}} object location \\
+\hline
+{\em angle} & -\/ initiate angle of direction on begin of movement \\
+\hline
+{\em size} & -\/ initial size of snake after creation. Default size=20 \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+sf\+::\+Vector2f
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Olha Sereda 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Olha Sereda (\href{mailto:olha.sereda@student.uj.edu.pl}{\texttt{ olha.\+sereda@student.\+uj.\+edu.\+pl}}) 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_snake_a77e5c343d9a41bb700bfe20fd00f215d}\label{class_snake_a77e5c343d9a41bb700bfe20fd00f215d}} 
+\index{Snake@{Snake}!CalcDiff@{CalcDiff}}
+\index{CalcDiff@{CalcDiff}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{CalcDiff()}{CalcDiff()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Snake\+::\+Calc\+Diff (\begin{DoxyParamCaption}\item[{float}]{deg,  }\item[{float}]{lenght }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Method measures geometric offset vector relative to angle of direction and step length. 
+\begin{DoxyParams}{Parameters}
+{\em absolute} & angle of movement in degrees. \\
+\hline
+{\em offset} & lenght value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+geometric offset vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_snake_a2398caddba922a7e9b11242343c64a3b}\label{class_snake_a2398caddba922a7e9b11242343c64a3b}} 
+\index{Snake@{Snake}!draw@{draw}}
+\index{draw@{draw}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Snake\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual redefined function to draw \mbox{\hyperlink{class_snake}{Snake}} object on screen.~\newline
+It uses standart params to be used in sf\+::window.\+draw() method. 
+\begin{DoxyParams}{Parameters}
+{\em target} & Render target to draw to \href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1RenderTarget.php}{\texttt{ sf\+::\+Render\+Target}} \\
+\hline
+{\em states} & Current render states \href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1RenderStates.php}{\texttt{ sf\+::\+Render\+States}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Drawable.php}{\texttt{ sf\+::\+Drawable}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_snake_a6e5816478df2547a6140c8ffd8c83944}\label{class_snake_a6e5816478df2547a6140c8ffd8c83944}} 
+\index{Snake@{Snake}!get\_coord@{get\_coord}}
+\index{get\_coord@{get\_coord}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{get\_coord()}{get\_coord()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Snake\+::get\+\_\+coord (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Method returns the coordinates of the head of snake (first tail element). 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Vector2.php}{\texttt{ sf\+::\+Vector2f}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_snake_a37096b93062ca63114308569d692dab2}\label{class_snake_a37096b93062ca63114308569d692dab2}} 
+\index{Snake@{Snake}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily int Snake\+::get\+\_\+size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Method returns length of the tail. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Rect.php}{\texttt{ sf\+::\+Float\+Rect}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_snake_af79bbc8f1d5e87ac972c47b7bbc19ab0}\label{class_snake_af79bbc8f1d5e87ac972c47b7bbc19ab0}} 
+\index{Snake@{Snake}!GetRect@{GetRect}}
+\index{GetRect@{GetRect}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{GetRect()}{GetRect()}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect Snake\+::\+Get\+Rect (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Method returns the set of box(rectangle) coordinates of head of snake (first tail element). 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Rect.php}{\texttt{ sf\+::\+Float\+Rect}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_snake_a5dee5234e6eaf255cad39afca3d11834}\label{class_snake_a5dee5234e6eaf255cad39afca3d11834}} 
+\index{Snake@{Snake}!grow@{grow}}
+\index{grow@{grow}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{grow()}{grow()}}
+{\footnotesize\ttfamily void Snake\+::grow (\begin{DoxyParamCaption}\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+Enlarge tail to the number of elements. 
+\begin{DoxyParams}{Parameters}
+{\em count} & and new tail elements \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_snake_aa259354a4e2eb88f746549e50db13bf7}\label{class_snake_aa259354a4e2eb88f746549e50db13bf7}} 
+\index{Snake@{Snake}!reset\_delta@{reset\_delta}}
+\index{reset\_delta@{reset\_delta}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{reset\_delta()}{reset\_delta()}}
+{\footnotesize\ttfamily void Snake\+::reset\+\_\+delta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Set \mbox{\hyperlink{class_snake_a60432d2ced74945555c26ae4279369b9}{Snake\+::delta}} to 1; \mbox{\Hypertarget{class_snake_ae7fe32c1a1b701d133aeec52ad218869}\label{class_snake_ae7fe32c1a1b701d133aeec52ad218869}} 
+\index{Snake@{Snake}!self\_intersection@{self\_intersection}}
+\index{self\_intersection@{self\_intersection}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{self\_intersection()}{self\_intersection()}}
+{\footnotesize\ttfamily bool Snake\+::self\+\_\+intersection (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Method returns true in case of head(first element) intersected with its tail. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Rect.php}{\texttt{ sf\+::\+Float\+Rect}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_snake_af6c58c1bc5608aa891a42229600b5a39}\label{class_snake_af6c58c1bc5608aa891a42229600b5a39}} 
+\index{Snake@{Snake}!turn\_left@{turn\_left}}
+\index{turn\_left@{turn\_left}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{turn\_left()}{turn\_left()}}
+{\footnotesize\ttfamily void Snake\+::turn\+\_\+left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Method changes angle to counterclock-\/wise on \mbox{\hyperlink{class_snake_a60432d2ced74945555c26ae4279369b9}{Snake\+::delta}} value of movement \mbox{\hyperlink{class_snake}{Snake}}.~\newline
+On each continuous call of method the \mbox{\hyperlink{class_snake_a60432d2ced74945555c26ae4279369b9}{Snake\+::delta}} increace to +0.\+5 to make feeling of turning acceleration.~\newline
+Metod can be called only one times per game tick to avoid unpredicted movement or states. \mbox{\Hypertarget{class_snake_ac002012a9a255d19fd75ea9156313394}\label{class_snake_ac002012a9a255d19fd75ea9156313394}} 
+\index{Snake@{Snake}!turn\_right@{turn\_right}}
+\index{turn\_right@{turn\_right}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{turn\_right()}{turn\_right()}}
+{\footnotesize\ttfamily void Snake\+::turn\+\_\+right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Method changes angle to clockwise on \mbox{\hyperlink{class_snake_a60432d2ced74945555c26ae4279369b9}{Snake\+::delta}} value of movement \mbox{\hyperlink{class_snake}{Snake}}.~\newline
+On each continuous call of method the \mbox{\hyperlink{class_snake_a60432d2ced74945555c26ae4279369b9}{Snake\+::delta}} increace to +0.\+5 to make feeling of turning acceleration.~\newline
+Metod can be called only one times per game tick to avoid unpredicted movement or states. \mbox{\Hypertarget{class_snake_a338fac88ccf64d23fc9be7fea41fb57f}\label{class_snake_a338fac88ccf64d23fc9be7fea41fb57f}} 
+\index{Snake@{Snake}!update@{update}}
+\index{update@{update}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Snake\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Method updates all \mbox{\hyperlink{class_snake}{Snake}} params on the each \mbox{\hyperlink{class_game}{Game}} tick.~\newline
+It adds new array element with new coords to the begin of array~\newline
+If the count of sections of \mbox{\hyperlink{class_snake}{Snake}} Hero in array greater or equal then size of Hero then remove one element from tail\textquotesingle{}s end~\newline
+Inserting new element with new coords to head and removing one element from end makes movement effect~\newline
+Metod can be called only one times per game tick to avoid unpredicted movement or states. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+snake.\+hpp\item 
+snake.\+cpp\end{DoxyCompactItemize}

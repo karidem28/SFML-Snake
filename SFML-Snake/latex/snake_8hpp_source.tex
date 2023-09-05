@@ -1,0 +1,37 @@
+\hypertarget{snake_8hpp_source}{}\doxysection{snake.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 }
+\DoxyCodeLine{39 \textcolor{keyword}{class }\mbox{\hyperlink{class_snake}{Snake}} : \textcolor{keyword}{public} sf::Drawable}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41 \textcolor{keyword}{public}:}
+\DoxyCodeLine{53     \mbox{\hyperlink{class_snake_a532f3c20dfe0b7bee0e3d645abad3c7f}{Snake}}(sf::Vector2f, \textcolor{keywordtype}{float}, \textcolor{keywordtype}{int});}
+\DoxyCodeLine{61     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_snake_a2398caddba922a7e9b11242343c64a3b}{draw}}(sf::RenderTarget\&, sf::RenderStates) \textcolor{keyword}{const};}
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_snake_a338fac88ccf64d23fc9be7fea41fb57f}{update}}();}
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_snake_af6c58c1bc5608aa891a42229600b5a39}{turn\_left}}();}
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_snake_ac002012a9a255d19fd75ea9156313394}{turn\_right}}();}
+\DoxyCodeLine{86     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_snake_a5dee5234e6eaf255cad39afca3d11834}{grow}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int});}
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_snake_aa259354a4e2eb88f746549e50db13bf7}{reset\_delta}}();}
+\DoxyCodeLine{95     sf::Vector2f \mbox{\hyperlink{class_snake_a6e5816478df2547a6140c8ffd8c83944}{get\_coord}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{100     sf::FloatRect \mbox{\hyperlink{class_snake_af79bbc8f1d5e87ac972c47b7bbc19ab0}{GetRect}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{105     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_snake_ae7fe32c1a1b701d133aeec52ad218869}{self\_intersection}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{110     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_snake_a37096b93062ca63114308569d692dab2}{get\_size}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{111 \textcolor{keyword}{private}:}
+\DoxyCodeLine{112     sf::Color \mbox{\hyperlink{class_snake_a354190b53e2c0d0c3820c9048e30b433}{color}};   }
+\DoxyCodeLine{113     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_snake_a094669fbc835da222339285f376f0494}{speed}};       }
+\DoxyCodeLine{114     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_snake_a60432d2ced74945555c26ae4279369b9}{delta}};       }
+\DoxyCodeLine{115     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_snake_a48d030c4a737277f96880ae3f598c371}{angle}};       }
+\DoxyCodeLine{116     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_snake_a3c9e9751f34ddc79cac932736c7ee718}{size}};           }
+\DoxyCodeLine{117     std::vector <sf::Vector2f> \mbox{\hyperlink{class_snake_a6996f0098a98d654ff93a502f02d6f81}{path}};    }
+\DoxyCodeLine{124     sf::Vector2f \mbox{\hyperlink{class_snake_a77e5c343d9a41bb700bfe20fd00f215d}{CalcDiff}}(\textcolor{keywordtype}{float}, \textcolor{keywordtype}{float});}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 \};}
+
+\end{DoxyCode}

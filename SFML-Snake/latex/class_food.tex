@@ -1,0 +1,122 @@
+\hypertarget{class_food}{}\doxysection{Food Class Reference}
+\label{class_food}\index{Food@{Food}}
+
+
+\char`\"{}\+Snake Game\char`\"{} -\/ \mbox{\hyperlink{class_food}{Food}} Class.~\newline
+ 
+
+
+
+
+{\ttfamily \#include \char`\"{}food.\+hpp\char`\"{}}
+
+Inheritance diagram for Food\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_food}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_food_affb2c7eb460e34737de41fa35e2d6b11}{Food}} (sf\+::\+Vector2f)
+\item 
+virtual void \mbox{\hyperlink{class_food_af472a31ba8dc779974c89abe18dc7cb2}{draw}} (sf\+::\+Render\+Target \&, sf\+::\+Render\+States) const
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_food_a8d715f52bb99e0a2813409fdac51dc5c}{get\+\_\+coord}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_food_a0ddbc7cd2db9474216cf364e1af6ddd7}\label{class_food_a0ddbc7cd2db9474216cf364e1af6ddd7}} 
+sf\+::\+Vector2f {\bfseries coord}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\char`\"{}\+Snake Game\char`\"{} -\/ \mbox{\hyperlink{class_food}{Food}} Class.~\newline
+
+
+The Class implements functionality for the food object in game.~\newline
+\begin{DoxyAuthor}{Author}
+Olha Sereda 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Olha Sereda (\href{mailto:olha.sereda@student.uj.edu.pl}{\texttt{ olha.\+sereda@student.\+uj.\+edu.\+pl}})
+\end{DoxyCopyright}
+Array of objects of \mbox{\hyperlink{class_food}{Food}} class can be putten on the screen to ~\newline
+ make \mbox{\hyperlink{class_snake}{Snake}} not hungry.~\newline
+ The main goal of game to eat \mbox{\hyperlink{class_food}{Food}} as long as it possible and avoid all obstacles.~\newline
+ ~\newline
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{fptr = \textcolor{keyword}{new} \mbox{\hyperlink{class_food_affb2c7eb460e34737de41fa35e2d6b11}{Food}}(Vector2f(f\_coord.left,f\_coord.top));}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_food_affb2c7eb460e34737de41fa35e2d6b11}\label{class_food_affb2c7eb460e34737de41fa35e2d6b11}} 
+\index{Food@{Food}!Food@{Food}}
+\index{Food@{Food}!Food@{Food}}
+\doxysubsubsection{\texorpdfstring{Food()}{Food()}}
+{\footnotesize\ttfamily Food\+::\+Food (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{coord }\end{DoxyParamCaption})}
+
+Class constructor 
+\begin{DoxyParams}{Parameters}
+{\em sf\+::\+Vector2f} & -\/ abcolute coordinate of food object location \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Vector2.php}{\texttt{ sf\+::\+Vector2f}}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Olha Sereda 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Olha Sereda (\href{mailto:olha.sereda@student.uj.edu.pl}{\texttt{ olha.\+sereda@student.\+uj.\+edu.\+pl}}) 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_food_af472a31ba8dc779974c89abe18dc7cb2}\label{class_food_af472a31ba8dc779974c89abe18dc7cb2}} 
+\index{Food@{Food}!draw@{draw}}
+\index{draw@{draw}!Food@{Food}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Food\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual redefined function to draw \mbox{\hyperlink{class_food}{Food}} object on screen.~\newline
+It uses standart params to be used in sf\+::window.\+draw() method. 
+\begin{DoxyParams}{Parameters}
+{\em target} & Render target to draw to \href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1RenderTarget.php}{\texttt{ sf\+::\+Render\+Target}} \\
+\hline
+{\em states} & Current render states \href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1RenderStates.php}{\texttt{ sf\+::\+Render\+States}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Drawable.php}{\texttt{ sf\+::\+Drawable}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_food_a8d715f52bb99e0a2813409fdac51dc5c}\label{class_food_a8d715f52bb99e0a2813409fdac51dc5c}} 
+\index{Food@{Food}!get\_coord@{get\_coord}}
+\index{get\_coord@{get\_coord}!Food@{Food}}
+\doxysubsubsection{\texorpdfstring{get\_coord()}{get\_coord()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Food\+::get\+\_\+coord (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+current absolute coodinates of food object location 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Vector2.php}{\texttt{ sf\+::\+Vector2f}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+food.\+hpp\item 
+food.\+cpp\end{DoxyCompactItemize}
